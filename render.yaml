@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: soulsync-api
+    env: node
+    plan: free
+    region: oregon
+    rootDir: soulsync/soulsync-api
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20.x
+      - key: PORT
+        value: 5003
+      - key: CLOUDINARY_CLOUD_NAME
+        sync: false
+      - key: CLOUDINARY_API_KEY
+        sync: false
+      - key: CLOUDINARY_API_SECRET
+        sync: false
+      - key: CLOUDINARY_UPLOAD_PRESET
+        value: soulsync_images
+      - key: MAX_IMAGE_SIZE_KB
+        value: "500"
+      - key: FIREBASE_PROJECT_ID
+        value: soulsync-prod-app
+      - key: FIREBASE_SERVICE_ACCOUNT
+        sync: false
+      - key: ALLOWED_ORIGINS
+        value: https://soulsync-prod-app.web.app,https://soulsync-prod-app.firebaseapp.com,https://soulsync-b29c8.web.app,https://soulsync-b29c8.firebaseapp.com

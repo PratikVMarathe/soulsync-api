@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Environment Variables & Secrets
+.env
+.env.*
+!.env.example
+*.json
+!package.json
+!package-lock.json
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Coverage / Testing
+coverage/
+.nyc_output/
+
+# OS / Editor artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
