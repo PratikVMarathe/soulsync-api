@@ -30,4 +30,4 @@ services:
       - key: FIREBASE_SERVICE_ACCOUNT
         sync: false
       - key: ALLOWED_ORIGINS
-        value: https://soulsync-b29c8.web.app,https://soulsync-b29c8.firebaseapp.com,https://soulsync-prod-app.web.app,https://soulsync-prod-app.firebaseapp.com,http://localhost:5000,http://localhost:5002,https://soulsync-dev-host.web.app
+        value: https://soulsync-dev-admin.web.app,https://soulsync-dev-host.web.app,https://soulsync-dev-quiz.web.app,https://soulsync-b29c8.web.app,https://soulsync-b29c8.firebaseapp.com,https://soulsync-prod-app.web.app,https://soulsync-prod-app.firebaseapp.com,http://localhost:5000,http://localhost:5001,http://localhost:5002
