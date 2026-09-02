@@ -1,9 +1,7 @@
+import './env.js';
 import fs from 'fs';
 import path from 'path';
 import admin from 'firebase-admin';
-import dotenv from 'dotenv';
-
-dotenv.config();
 
 function initializeFirebaseAdmin() {
   if (admin.apps.length > 0) {

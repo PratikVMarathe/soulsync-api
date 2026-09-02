@@ -1,10 +1,8 @@
+import './config/env.js';
 import express from 'express';
 import cors from 'cors';
-import dotenv from 'dotenv';
 import healthRouter from './routes/health.js';
 import cloudinaryRouter from './routes/cloudinary.js';
-
-dotenv.config();
 
 const app = express();
 
@@ -15,6 +13,7 @@ const defaultOrigins = [
   'http://localhost:5002',
   'http://localhost:5003',
   'http://localhost:5173',
+  'https://soulsync-dev-host.web.app',
   'https://soulsync-b29c8.web.app',
   'https://soulsync-b29c8.firebaseapp.com',
   'https://soulsync-prod-app.web.app',
