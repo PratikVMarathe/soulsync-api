@@ -38,11 +38,11 @@ function initializeFirebaseAdmin() {
     } catch (err) {
       console.error(`Failed to load service account file from ${serviceAccountPath}:`, err);
     }
-  } else if (process.env.GOOGLE_APPLICATION_CREDENTIALS) {
+  } else {
     try {
       credential = admin.credential.applicationDefault();
     } catch (err) {
-      console.error('Failed to load application default credentials:', err);
+      // In environments without application default credentials, credential remains null
     }
   }
 

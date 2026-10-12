@@ -3,6 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import healthRouter from './routes/health.js';
 import cloudinaryRouter from './routes/cloudinary.js';
+import interestRequestsRouter from './routes/interestRequests.js';
 
 const app = express();
 
@@ -59,6 +60,7 @@ app.use(express.json());
 // Mount routes
 app.use('/health', healthRouter);
 app.use('/api/cloudinary', cloudinaryRouter);
+app.use('/api/interest-requests', interestRequestsRouter);
 
 // 404 handler
 app.use((req, res) => {
